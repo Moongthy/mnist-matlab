@@ -40,7 +40,7 @@ fprintf('%i-th update and error is %f\n ', Iter-1, E1); %0번째 한번해봤을
 %여기선 일단 에러가 크게난다. 아래의 while문에서 트레이닝시작
 
 %%
-while Resid>=Tol
+while Resid>=Tol && Iter < MaxIter
     %바로전스텝에서의 오차와 현재오차의 차이가 크게없거나 Iteration이 지정해둔 차례까지
     for m=1:length(T)
         xm=[1 X(m,:)]';
